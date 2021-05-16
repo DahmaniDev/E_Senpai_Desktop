@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 mars 2021, 14:04:16
+    Author     : Dahmani
+*/
+
+.shadow1{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0),10 ,0,0,10);
+}    
+.shadow1:hover{
+    -fx-font-veight: bold;
+    -fb-background-radius:22;
+    -fx-font-size: 16;
+    -fx-text-fill: #2196f3;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 20;
+    -fx-border-vidth: 3;
+}
+.Recherche{
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+.chercherbtn{
+    -fx-font-veight: bold;
+    -fx-background-color: #07000E;
+    -fx-background-radius: 22;
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    
+}

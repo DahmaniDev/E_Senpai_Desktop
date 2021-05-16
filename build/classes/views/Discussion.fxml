@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DiscussionController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.2586520947176685" prefHeight="650.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane fx:id="leftPane" maxHeight="648.0" maxWidth="281.0" minHeight="648.0" minWidth="281.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #07000E;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="accueilBtn" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Accueil">
+                     
+                  </Button>
+                  <Button fx:id="profilBtn" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleProfilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Profil">
+                     
+                  </Button>
+                  <Button fx:id="formationsBtn" layoutX="12.0" layoutY="144.0" mnemonicParsing="false" onAction="#HandleFormationsBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Formations">
+                     
+                  </Button>
+                  <Button fx:id="test_quizBtn" layoutX="12.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleTestQuizBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Tests &amp; Quizs">
+                     
+                  </Button>
+                  <Button fx:id="chatBtn" layoutX="12.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleChatBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Chat">
+                     
+                  </Button>
+                  <Button fx:id="blogBtn" layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleBlogBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Blog">
+                     
+                  </Button>
+                  <Button fx:id="deconnectBtn" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleDeconnectBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: none; -fx-text-fill: #EECC8D; -fx-border-color: #EECC8D;" text="Déconnecter">
+                     
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="rightPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <AnchorPane fx:id="accueilPane" prefHeight="650.0" prefWidth="811.0">
+                     <children>
+                        <Button fx:id="button_chatbot" layoutX="659.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="38.0" prefWidth="128.0" text="Chat Bot" />
+                        <VBox fx:id="vbox_discussion" layoutX="14.0" layoutY="357.0" prefHeight="277.0" prefWidth="732.0" spacing="8.0" />
+                        <TextField fx:id="search_bar" layoutX="119.0" layoutY="24.0" prefHeight="25.0" prefWidth="211.0" promptText="Rechercher Utilisateur" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-border-color: #8A2C02;">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <VBox fx:id="vbox_utilisateur" layoutX="30.0" layoutY="56.0" prefHeight="151.0" prefWidth="459.0" spacing="8.0" />
+                        <Button fx:id="search" layoutX="354.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleSearchbtn" text="Search" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

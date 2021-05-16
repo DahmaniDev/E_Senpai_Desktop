@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox fx:id="boxId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="230.0" style="-fx-background-radius: 15; -fx-background-color: #EECC8D;" styleClass="shadow1" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardGestionFormationController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="230.0">
+         <children>
+            <ImageView fx:id="imageID" fitHeight="72.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/formation.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="125.0" prefWidth="159.0">
+               <children>
+                  <Label fx:id="TitreFormationId" alignment="CENTER" prefHeight="63.0" prefWidth="174.0" text="Titre &#10;Formation">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="IdFormateur" disable="true" prefHeight="21.0" prefWidth="0.0" text="Label" />
+            <Label fx:id="IdFormation" prefHeight="7.0" prefWidth="25.0" text="Label" visible="false" />
+         </children>
+      </HBox>
+      <Rating fx:id="RateId" disable="true" mouseTransparent="true" prefHeight="38.0" prefWidth="224.0" stylesheets="@../css/stylesheet.css">
+         <effect>
+            <ColorAdjust contrast="1.0" />
+         </effect>
+      </Rating>
+      <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="118.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="43.0">
+               <children>
+                  <ImageView fx:id="ConsulterFormationID" fitHeight="42.0" fitWidth="38.0" onMouseClicked="#handleConsulterFormation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/eye.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="DeleteFormationId" fitHeight="32.0" fitWidth="39.0" onMouseClicked="#handleDeleteFormation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/delete.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChatBotController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="625.0">
+         <children>
+            <ScrollPane layoutY="43.0" prefHeight="313.0" prefWidth="615.0">
+               <content>
+                  <VBox fx:id="vbox_msg" prefHeight="299.0" prefWidth="615.0" spacing="8.0" />
+               </content>
+            </ScrollPane>
+            <TextField fx:id="text_field" layoutY="356.0" onKeyPressed="#handleKeyPressed" prefHeight="45.0" prefWidth="507.0" />
+            <Button fx:id="retour_btn" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRetourBtn" text="Retour &lt;----" />
+            <Button fx:id="envoi_msg" layoutX="507.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleEnvoiMsg" prefHeight="45.0" prefWidth="108.0" text="Envoyer Message" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

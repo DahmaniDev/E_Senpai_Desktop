@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestController">
+    <stylesheets>
+        <URL value="@/assets/test.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="-12.0" layoutY="-3.0" prefHeight="653.0" prefWidth="305.0" spacing="30.0" style="-fx-background-color: black;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Acceuil" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Profil" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Formations" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Tests &amp; Quiz" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Chat" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="275.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Deconnecter">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="25.0" top="75.0" />
+         </padding>
+      </VBox>
+      <TabPane layoutX="291.0" layoutY="4.0" prefHeight="646.0" prefWidth="988.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabAdd" closable="false" text="AJOUTER QUIZ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="709.0" prefWidth="988.0" style="-fx-background-color: lightgrey;">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="129.0" prefHeight="376.0" prefWidth="197.0" spacing="28.0" stylesheets="@../assets/test.css">
+                           <children>
+                              <Label text="Sujet ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Question posée  ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Reponse correcte ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mauvaise reponse 1 ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mauvaise reponse 2 ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mauvaise reponse 3 ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label stylesheets="@../assets/test.css" text="Note pour la question">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label layoutX="271.0" layoutY="14.0" prefHeight="34.0" prefWidth="436.0" text="AJOUTER UN QUIZ/TEST">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="204.0" layoutY="129.0" prefHeight="379.0" prefWidth="393.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="tfSujet">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfQposee">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfRcorrecte">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfMrep1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfMrep2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfMrep3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfnote">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Label fx:id="labelQuestion" layoutX="605.0" layoutY="129.0" prefHeight="36.0" prefWidth="430.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="rbtn1" layoutX="648.0" layoutY="191.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbtn3" layoutX="648.0" layoutY="298.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbtn2" layoutX="648.0" layoutY="247.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="rbtn4" layoutX="648.0" layoutY="357.0" mnemonicParsing="false" />
+                        <Button fx:id="btnPrev" layoutX="642.0" layoutY="406.0" mnemonicParsing="false" onAction="#prevQuestion" prefHeight="30.0" prefWidth="100.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="&lt;&lt;  prev">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="btnNext" layoutX="783.0" layoutY="406.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="30.0" prefWidth="100.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="next  &gt;&gt;">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="btnAddQuestion" layoutX="375.0" layoutY="524.0" mnemonicParsing="false" onAction="#addQuestion" prefHeight="31.0" prefWidth="187.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="ajouter">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></Button>
+                        <Button fx:id="btnAddTest" layoutX="614.0" layoutY="508.0" mnemonicParsing="false" onAction="#addTest" prefHeight="58.0" prefWidth="300.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css" text="Enregistrer">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="58.0" fitWidth="68.0" layoutX="633.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icons8_save_30px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="comboType" layoutX="25.0" layoutY="75.0" onAction="#changeComboType" prefHeight="43.0" prefWidth="184.0" promptText="Choisir le type " />
+                        <ComboBox fx:id="comboFormation" layoutX="219.0" layoutY="75.0" onAction="#changeComboFormation" prefHeight="45.0" prefWidth="312.0" promptText="Choisir la formation" />
+                        <ComboBox fx:id="comboHeure" layoutX="597.0" layoutY="77.0" prefHeight="42.0" prefWidth="102.0" promptText="Heures" />
+                        <ComboBox fx:id="comboMinutes" layoutX="707.0" layoutY="76.0" prefHeight="42.0" prefWidth="113.0" promptText="Minutes" />
+                        <Label fx:id="labelDuree" layoutX="545.0" layoutY="77.0" prefHeight="42.0" prefWidth="71.0" text="Durée :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="listQuiz" onSelectionChanged="#displayTest" text="Liste Quiz">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="910.0" prefWidth="1448.0" style="-fx-background-color: lightgrey;">
+                     <children>
+                        <TableView fx:id="tvQuiz" editable="true" layoutX="15.0" layoutY="286.0" onMouseClicked="#showSelectedQuiz" prefHeight="264.0" prefWidth="273.0">
+                          <columns>
+                            <TableColumn fx:id="colDuree" prefWidth="63.0" text="Durée" />
+                              <TableColumn fx:id="colSujet" prefWidth="209.0" text="sujet" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tvQuestion" layoutX="22.0" layoutY="45.0" onMouseClicked="#showSelectedItem" prefHeight="219.0" prefWidth="921.0">
+                          <columns>
+                            <TableColumn fx:id="colQuiz" prefWidth="60.0" text="type" />
+                              <TableColumn fx:id="colQposee" prefWidth="134.0" text="Q posée" />
+                              <TableColumn fx:id="colRep" prefWidth="146.0" text="Rep Correcte" />
+                              <TableColumn fx:id="colMrep1" prefWidth="169.0" text="Mauvaise rep 1" />
+                              <TableColumn fx:id="colMrep2" prefWidth="195.3333740234375" text="Mauvaise rep 2" />
+                              <TableColumn fx:id="colMrep3" prefWidth="154.0" text="Mauvaise rep 3" />
+                              <TableColumn fx:id="colNote" prefWidth="67.0" text="note" />
+                          </columns>
+                        </TableView>
+                        <AnchorPane layoutX="304.0" layoutY="344.0" prefHeight="254.0" prefWidth="623.0">
+                           <children>
+                              <VBox prefHeight="254.0" prefWidth="184.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Sujet" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Question posée" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Reponse correcte" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Mauvaise reponse 1" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Mauvaise reponse 2" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Mauvaise reponse 3" />
+                                    <Label prefHeight="20.0" prefWidth="200.0" text="Note" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="184.0" layoutY="-1.0" prefHeight="253.0" prefWidth="433.0" spacing="5.0">
+                                 <children>
+                                    <TextField fx:id="tfSujetShow" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfQposeeShow" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfRcorrShow" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfMrep1Show" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfMrep2Show" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfMrep3Show" prefHeight="15.0" prefWidth="200.0" />
+                                    <TextField fx:id="tfMrepNoteShow" layoutX="10.0" layoutY="255.0" prefHeight="15.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="btnUpdateItem" layoutX="718.0" layoutY="279.0" mnemonicParsing="false" onAction="#updateTest" prefHeight="34.0" prefWidth="38.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css">
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icons8_edit_file_26px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDeleteItem" layoutX="790.0" layoutY="277.0" mnemonicParsing="false" onAction="#deleteTest" prefHeight="46.0" prefWidth="47.0" styleClass="buttonsQuiz" stylesheets="@../assets/acceuiletudiant.css">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icons8_remove_24px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ComboBox fx:id="comboApplyOn" layoutX="541.0" layoutY="289.0" prefHeight="31.0" prefWidth="146.0" promptText="Appliquer sur" style="-fx-background-color: #EECC8D;" />
+                        <Button fx:id="btnUpdateAdd" layoutX="851.0" layoutY="273.0" mnemonicParsing="false" onAction="#updateAddQuestion" prefHeight="34.0" prefWidth="50.0" stylesheets="@../assets/acceuiletudiant.css">
+                           <graphic>
+                              <ImageView fitHeight="43.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icons8_add_30px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="tfSearch" layoutX="166.0" layoutY="9.0" onKeyTyped="#searchQuestion" prefHeight="34.0" prefWidth="676.0" style="-fx-background-radius: 50,50;">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </TextField>
+                        <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="865.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icons8_search_32px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="comboHeureUpdate" layoutX="319.0" layoutY="291.0" prefHeight="31.0" prefWidth="100.0" promptText="Heures" />
+                        <ComboBox fx:id="comboMinUpdate" layoutX="442.0" layoutY="291.0" prefHeight="31.0" prefWidth="79.0" promptText="Min" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="stat" onSelectionChanged="#displayNoteTableView" text="Statitistiques">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: lightgrey;">
+                     <children>
+                        <TableView fx:id="tvNote" layoutX="14.0" layoutY="14.0" onMouseClicked="#getClickedNote" prefHeight="222.0" prefWidth="610.0">
+                          <columns>
+                            <TableColumn fx:id="colSujetNote" prefWidth="182.33334350585938" text="Sujet Test" />
+                              <TableColumn fx:id="colEtudStat" prefWidth="155.66665649414062" text="Etudiant" />
+                              <TableColumn fx:id="colNoteStat" prefWidth="80.3333740234375" text="Note" />
+                              <TableColumn fx:id="colFormation" prefWidth="191.6666259765625" text="Formation" />
+                          </columns>
+                        </TableView>
+                        <LineChart fx:id="lineChart" layoutX="9.0" layoutY="257.0" prefHeight="314.0" prefWidth="521.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <BarChart fx:id="barChart" layoutX="534.0" layoutY="269.0" prefHeight="291.0" prefWidth="389.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="Xsujet" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="Ynote" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <TableView fx:id="tvTestNote" layoutX="658.0" layoutY="14.0" onMouseClicked="#getClickedTest" prefHeight="219.0" prefWidth="260.0">
+                          <columns>
+                            <TableColumn fx:id="colTestNote" prefWidth="192.0" text="Test" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

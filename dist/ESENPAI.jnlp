@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ESENPAI.jnlp">
+  <information>
+    <title>ESENPAI</title>
+    <vendor>Dahmani</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path="C:\Program Files\Java\opencv\build\java\x64" "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ESENPAI.jar" size="8889181" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\commons-io-2.8.0.jar" size="285424" download="eager" />
+    <jar href="lib\controlsfx-8.40.15.jar" size="1402490" download="eager" />
+    <jar href="lib\itextpdf-5.3.5.jar" size="1852860" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\jfreechart-1.0.19-demo.jar" size="1437338" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\opencv-3413.jar" size="644889" download="eager" />
+    <jar href="lib\twilio-8.9.0-jar-with-dependencies.jar" size="8358946" download="eager" />
+    <jar href="lib\twilio-8.9.0-javadoc.jar" size="14288596" download="eager" />
+    <jar href="lib\twilio-8.9.0-sources.jar" size="2819853" download="eager" />
+    <jar href="lib\twilio-8.9.0.jar" size="4206744" download="eager" />
+    <jar href="lib\zxing-1.7-javase.jar" size="22002" download="eager" />
+    <jar href="lib\zxing-core-2.0.jar" size="432773" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ESENPAI" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="esenpai.main.Esenpai"  name="ESENPAI" />
+  <update check="always"/>
+</jnlp>

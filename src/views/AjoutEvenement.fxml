@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@boutton.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjoutEvenementController">
+   <children>
+      <SplitPane dividerPositions="0.2586520947176685" layoutX="-3.0" layoutY="-1.0" prefHeight="650.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #000000;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="accueilBtn" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Accueil" textFill="#eecc8d" />
+                  <Button fx:id="profilBtn" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Profil" textFill="#eecc8d" />
+                  <Button fx:id="formationsBtn" layoutX="12.0" layoutY="144.0" mnemonicParsing="false" onAction="#HandleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Formations" textFill="#eecc8d" />
+                  <Button fx:id="test_quizBtn" layoutX="12.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleTestQuizBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Tests &amp; Quizs" textFill="#eecc8d" />
+                  <Button fx:id="chatBtn" layoutX="12.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleChatBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Chat" textFill="#eecc8d" />
+                  <Button fx:id="deconnectBtn" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleDeconnectBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Déconnecter" textFill="#eecc8d" />
+                  <Button fx:id="btnEvent" layoutX="11.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleEvent" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: 000000;" text="Evenement" textFill="#eecc8d" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <ImageView fitHeight="648.0" fitWidth="1158.0" layoutX="-119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/laptop-2838921_1920.jpg" />
+                     </image>
+                     <effect>
+                        <GaussianBlur />
+                     </effect>
+                  </ImageView>
+                  <TextField fx:id="textPrix" layoutX="167.0" layoutY="227.0" />
+                  <TextField fx:id="textEmplacement" layoutX="167.0" layoutY="166.0" />
+                  <TextField fx:id="textTitre" layoutX="167.0" layoutY="106.0" />
+                  <TextField fx:id="textFondation" layoutX="167.0" layoutY="356.0" />
+                  <TextField fx:id="textNbMax" layoutX="167.0" layoutY="427.0" />
+                  <TextField fx:id="textDuree" layoutX="167.0" layoutY="489.0" style="-fx-background-color: #;" />
+                  <Text fill="#8a2c02" layoutX="51.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="48.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max participants">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="48.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fondation">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="48.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date événement">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="50.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="50.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emplacement">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text fill="#8a2c02" layoutX="50.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Button fx:id="btnAnnuler" layoutX="447.0" layoutY="549.0" mnemonicParsing="false" onAction="#HandleAnnuler" style="-fx-background-color: 000000;" text="Annuler" textFill="#eecc8d" />
+                  <Button fx:id="btnAjout" layoutX="288.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleAjout" style="-fx-background-color: 000000;" text="Ajouter Evenement" textFill="#eecc8d" />
+                  <Text fill="#8a2c02" layoutX="317.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout d'un événement">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="textDate" layoutX="167.0" layoutY="292.0" />
+                  <Button fx:id="btnUpload" layoutX="405.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleUpload" style="-fx-background-color: 000000;" text="Upload image" textFill="#eecc8d" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

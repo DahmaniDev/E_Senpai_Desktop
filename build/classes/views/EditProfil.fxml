@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditProfilController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.2586520947176685" prefHeight="650.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane fx:id="leftPane" maxHeight="648.0" maxWidth="281.0" minHeight="648.0" minWidth="281.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #07000E;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="accueilBtn" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Accueil">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="profilBtn" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleProfilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #8A2C02; -fx-border-color: #EECC8D; -fx-background-color: #EECC8D;" text="Profil">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="formationsBtn" layoutX="12.0" layoutY="144.0" mnemonicParsing="false" onAction="#HandleFormationsBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Formations">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="test_quizBtn" layoutX="12.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleTestQuizBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Tests &amp; Quizs">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="chatBtn" layoutX="12.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleChatBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Chat">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="blogBtn" layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleBlogBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Blog">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="deconnectBtn" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleDeconnectBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: none; -fx-text-fill: #EECC8D; -fx-border-color: #EECC8D;" text="Déconnecter">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="reclamationsBtn" layoutX="12.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleReclamationsBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: none; -fx-text-fill: #EECC8D; -fx-border-color: #EECC8D;" text="Réclamations">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="profilPane" prefHeight="650.0" prefWidth="811.0">
+               <children>
+                  <AnchorPane fx:id="modifierSucces" prefHeight="648.0" prefWidth="811.0" visible="false">
+                     <children>
+                        <Label layoutX="247.0" layoutY="248.0" prefHeight="35.0" prefWidth="318.0" text="Compte modifié avec succés !">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="retourBtn" layoutX="384.0" layoutY="313.0" onAction="#handleRetourBtn" text="Retour" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="updateprofilPane" layoutX="-7.0" prefHeight="648.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="309.0" layoutY="34.0" prefHeight="27.0" prefWidth="170.0" style="-fx-text-fill: #8A2C02;" text="Modifier votre profil :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputNom" layoutX="293.0" layoutY="119.0" prefHeight="25.0" prefWidth="201.0" promptText="Nom" style="-fx-border-color: #EECC8D;" />
+                        <TextField fx:id="inputPrenom" layoutX="293.0" layoutY="175.0" prefHeight="25.0" prefWidth="201.0" promptText="Pénom" style="-fx-border-color: #EECC8D;" />
+                        <DatePicker fx:id="inputDateN" layoutX="293.0" layoutY="282.0" prefHeight="25.0" prefWidth="201.0" promptText="Date de naissance" style="-fx-border-color: #EECC8D;" />
+                        <RadioButton fx:id="rbHomme" layoutX="296.0" layoutY="234.0" mnemonicParsing="false" onAction="#hommeSelected" text="Homme">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rbGender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbFemme" layoutX="433.0" layoutY="234.0" mnemonicParsing="false" onAction="#femmeSelected" text="Femme">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rbGender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <TextField fx:id="inputEmail" layoutX="293.0" layoutY="334.0" prefHeight="25.0" prefWidth="201.0" promptText="E-mail" style="-fx-border-color: #EECC8D;" />
+                        <TextField fx:id="inputLogin" layoutX="293.0" layoutY="383.0" prefHeight="25.0" prefWidth="201.0" promptText="Login" style="-fx-border-color: #EECC8D;" />
+                        <PasswordField fx:id="inputPassword" layoutX="293.0" layoutY="429.0" prefHeight="25.0" prefWidth="201.0" promptText="Mot de passe" style="-fx-border-color: #EECC8D;" />
+                        <PasswordField fx:id="inputVPassword" layoutX="293.0" layoutY="476.0" prefHeight="25.0" prefWidth="201.0" promptText="Confirmer mot de passe" style="-fx-border-color: #EECC8D;" />
+                        <Label layoutX="210.0" layoutY="121.0" prefHeight="17.0" prefWidth="76.0" style="-fx-text-fill: #07000E;" text="Nom :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="189.0" layoutY="178.0" prefHeight="17.0" prefWidth="76.0" style="-fx-text-fill: #07000E;" text="Prénom :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="123.0" layoutY="285.0" prefHeight="20.0" prefWidth="132.0" style="-fx-text-fill: #07000E;" text="Date de naissance :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="206.0" layoutY="232.0" prefHeight="20.0" prefWidth="42.0" style="-fx-text-fill: #07000E;" text="Sexe :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="200.0" layoutY="337.0" prefHeight="20.0" prefWidth="61.0" style="-fx-text-fill: #07000E;" text="E-mail :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="206.0" layoutY="386.0" prefHeight="20.0" prefWidth="49.0" style="-fx-text-fill: #07000E;" text="Login :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="432.0" prefHeight="20.0" prefWidth="99.0" style="-fx-text-fill: #07000E;" text="Mot de passe :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="104.0" layoutY="479.0" prefHeight="20.0" prefWidth="170.0" style="-fx-text-fill: #07000E;" text="Confirmer mot de passe :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modifierBtn" layoutX="328.0" layoutY="573.0" mnemonicParsing="false" onAction="#handleModifierBtn" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #8A2C02; -fx-text-fill: white;" text="Modifier">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Label fx:id="erreurLabel" alignment="CENTER" layoutX="265.0" layoutY="524.0" prefHeight="17.0" prefWidth="258.0" textFill="RED" />
+                        <TextArea fx:id="bioInput" layoutX="579.0" layoutY="306.0" prefHeight="200.0" prefWidth="200.0" promptText="Biography" style="-fx-border-color: #EECC8D;" />
+                        <Label layoutX="579.0" layoutY="265.0" prefHeight="20.0" prefWidth="99.0" style="-fx-text-fill: #07000E;" text="Biography :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="imageUrl" editable="false" layoutX="579.0" layoutY="220.0" />
+                        <Button fx:id="importBtn" layoutX="728.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleImportBtn" prefHeight="25.0" prefWidth="49.0" />
+                        <Label layoutX="579.0" layoutY="192.0" prefHeight="20.0" prefWidth="109.0" style="-fx-text-fill: #07000E;" text="Image de Profil :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cvUrl" editable="false" layoutX="579.0" layoutY="159.0" />
+                        <Button fx:id="importCvBtn" layoutX="728.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleImportCvBtn" prefHeight="25.0" prefWidth="49.0" />
+                        <Label fx:id="cvLabel" layoutX="579.0" layoutY="131.0" prefHeight="20.0" prefWidth="117.0" style="-fx-text-fill: #07000E;" text="Curriculum Vitae :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" stylesheets="@boutton.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConsulterEvenementController">
+   <children>
+      <SplitPane dividerPositions="0.2586520947176685" prefHeight="650.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #000;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="accueilBtn" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Accueil" />
+                  <Button fx:id="profilBtn" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Profil" />
+                  <Button fx:id="formationsBtn" layoutX="12.0" layoutY="144.0" mnemonicParsing="false" onAction="#HandleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Formations" />
+                  <Button fx:id="test_quizBtn" layoutX="12.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleTestQuizBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Tests &amp; Quizs" />
+                  <Button fx:id="chatBtn" layoutX="12.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleChatBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Chat" />
+                  <Button fx:id="deconnectBtn" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleDeconnectBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Déconnecter" />
+                  <Button fx:id="btnEvenement" layoutX="11.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleEvenement" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: #000;" text="Evenement" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <AnchorPane layoutX="298.0" layoutY="152.0" prefHeight="338.0" prefWidth="472.0" style="-fx-background-color: EECC8D; -fx-background-radius: 30;" />
+                  <Label fx:id="labelTitre" layoutX="298.0" layoutY="71.0" text="Titre" textFill="#8a2c02">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Label fx:id="labelEmplacement" layoutX="544.0" layoutY="190.0" text="Emplacement">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <Label fx:id="labelPrix" layoutX="544.0" layoutY="235.0" text="Prix">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <Label fx:id="labelDate" layoutX="545.0" layoutY="276.0" text="Date ">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <Label fx:id="labelFondation" layoutX="673.0" layoutY="439.0" text="Fondation" />
+                  <Label fx:id="labelDuree" layoutX="543.0" layoutY="350.0" text="Duree">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <Label fx:id="labelParticipant" layoutX="542.0" layoutY="311.0" text="participants">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <AnchorPane fx:id="imagePane" layoutX="31.0" layoutY="130.0" prefHeight="399.0" prefWidth="234.0" />
+                  <Text layoutX="589.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="fondé par:" />
+                  <Text layoutX="334.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localisation:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="337.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="337.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="337.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Participants:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="338.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

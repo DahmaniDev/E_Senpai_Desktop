@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfilController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.2586520947176685" prefHeight="650.0" prefWidth="1100.0">
+         <items>
+            <AnchorPane fx:id="leftPane" maxHeight="648.0" maxWidth="281.0" minHeight="648.0" minWidth="281.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #07000E;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="accueilBtn" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAccueilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Accueil">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="profilBtn" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleProfilBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #8A2C02; -fx-border-color: #EECC8D; -fx-background-color: #EECC8D;" text="Profil">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="formationsBtn" layoutX="12.0" layoutY="144.0" mnemonicParsing="false" onAction="#HandleFormationsBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Formations">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="test_quizBtn" layoutX="12.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleTestQuizBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Tests &amp; Quizs">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="chatBtn" layoutX="12.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleChatBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Chat">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="blogBtn" layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleBlogBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-text-fill: #EECC8D; -fx-border-color: #EECC8D; -fx-background-color: none;" text="Blog">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="deconnectBtn" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleDeconnectBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: none; -fx-text-fill: #EECC8D; -fx-border-color: #EECC8D;" text="Déconnecter">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="reclamationsBtn" layoutX="12.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleReclamationsBtn" prefHeight="38.0" prefWidth="258.0" style="-fx-background-color: none; -fx-text-fill: #EECC8D; -fx-border-color: #EECC8D;" text="Réclamations">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="650.0" prefWidth="811.0">
+               <children>
+                  <AnchorPane fx:id="MyProfil" prefHeight="648.0" prefWidth="811.0" visible="false">
+                     <children>
+                        <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="319.0" layoutY="169.0" prefHeight="27.0" prefWidth="211.0" style="-fx-text-fill: #D75404;" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bioLabel" alignment="CENTER" layoutX="89.0" layoutY="272.0" prefHeight="38.0" prefWidth="613.0" style="-fx-text-fill: #07000E;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="editBtn" fitHeight="38.0" fitWidth="27.0" layoutX="703.0" layoutY="102.0" onMouseClicked="#handleEditBtn" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/editProfil.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Line endX="336.0" layoutX="380.0" layoutY="331.0" startX="-307.0" />
+                        <AnchorPane fx:id="profilPane" layoutX="109.0" layoutY="103.0" maxHeight="133.0" maxWidth="130.0" minHeight="133.0" minWidth="130.0" prefHeight="133.0" prefWidth="130.0" />
+                        <Button fx:id="mesPostsBtn" layoutX="319.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleMesPostsBtn" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #8A2C02; -fx-text-fill: white;" text="Mes Posts" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="mesPostsPane" prefHeight="660.0" prefWidth="821.0">
+                     <children>
+                        <Line endX="336.0" layoutX="393.0" layoutY="139.0" startX="-307.0" />
+                        <ScrollPane layoutX="86.0" layoutY="199.0" prefHeight="374.0" prefWidth="644.0">
+                           <content>
+                              <VBox fx:id="postsVbox" prefHeight="362.0" prefWidth="644.0" spacing="10.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="ajouterPostBtn" layoutX="648.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleAjouterPost" style="-fx-background-color: #8A2C02; -fx-text-fill: white;" text="Ajouter Post" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

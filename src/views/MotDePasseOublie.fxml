@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MotDePasseOublieController">
+   <children>
+      <AnchorPane prefHeight="654.0" prefWidth="386.0" style="-fx-background-color: #07000E;">
+         <children>
+            <ImageView fitHeight="207.0" fitWidth="290.0" layoutX="62.0" layoutY="89.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logoE-SENPAI.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="302.0" fitWidth="405.0" layoutX="42.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/quote.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="385.0" prefHeight="654.0" prefWidth="715.0" style="-fx-background-color: #07000E;">
+         <children>
+            <ImageView fitHeight="654.0" fitWidth="715.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/background.jpg" />
+               </image>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </ImageView>
+            <AnchorPane layoutX="95.0" layoutY="138.0" prefHeight="402.0" prefWidth="525.0" style="-fx-background-color: #EECC8D; -fx-border-color: #8A2C02;">
+               <children>
+                  <TextField fx:id="emailInput" layoutX="140.0" layoutY="174.0" prefHeight="25.0" prefWidth="262.0" promptText="Adresse e-mail" style="-fx-border-color: #8A2C02;" />
+                  <Button fx:id="rechercherBtn" layoutX="269.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleRechercherBtn" prefHeight="25.0" prefWidth="161.0" style="-fx-text-fill: white; -fx-background-color: #8A2C02;" text="Rechercher">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Hyperlink fx:id="annulerBtn" alignment="CENTER" layoutX="96.0" layoutY="254.0" onAction="#handleAnnulerBtn" prefHeight="23.0" prefWidth="161.0" style="-fx-text-fill: #8A2C02; -fx-border-color: #8A2C02;" text="Annuler" />
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="104.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/student.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="erreurLabel" alignment="CENTER" layoutX="122.0" layoutY="236.0" prefHeight="17.0" prefWidth="302.0" textFill="#f50c0c" />
+                  <Label layoutX="70.0" layoutY="105.0" prefHeight="20.0" prefWidth="407.0" text="Veuillez saisir votre adresse e-mail pour rechercher votre compte.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="erreurLabel" alignment="CENTER" layoutX="177.0" layoutY="219.0" prefHeight="17.0" prefWidth="161.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="490.0" layoutY="623.0" prefHeight="17.0" prefWidth="201.0" style="-fx-text-fill: #8A2C02;" text="© 2020 E-Senpai. All rights reserved" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
